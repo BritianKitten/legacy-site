@@ -1,0 +1,80 @@
+@media only screen and (min-width : 897px) and (max-width : 996px){
+  
+  #homepage-main-text {left:42% !important; top:22% !important; width:50% !important;}
+  #homepage-main-text p {font-size:2.3vw !important; line-height:4vh;}
+  
+  #portfolio-main-text {left:32% !important; top:27% !important; width:50% !important;}
+  #portfolio-main-text p {font-size:2.3vw !important; line-height:4vh;}
+  
+  #fashion-main-text {left:47% !important; top:10% !important; width:45% !important;}
+  #fashion-main-text p {font-size:2.3vw !important; line-height:4vh;}
+  
+  #contact-form-pos {left:25% !important; top:39% !important; width:50% !important;}
+  #contact-form-pos p {font-size:2.3vw !important; line-height:4vh;}
+  
+}
+
+@media only screen and (min-width : 700px) and (max-width : 897px){
+  .mobile-soc-icon {width:8% !important; height:auto; }
+}
+
+@media only screen and (min-width : 500px) and (max-width : 700px){
+  li.parent {padding:4%; font-size:7vh !important; }
+ 
+}
+
+
+
+@media only screen and (max-width : 897px) {
+  
+.desktop  {display:none;}
+#portfolio-no-show {display:none;}  
+}
+
+@media only screen and (min-width : 897px) {
+  
+.mobile  {display:none;}
+  
+}
+
+#mobile-nav ul.sub-nav {
+    display: none;
+}
+
+#mobile-nav ul.visible {
+    display: block;
+}
+
+#mobile-nav2 ul.sub-nav2 {
+    display: none;
+}
+
+#mobile-nav2 ul.visible {
+    display: block;
+}
+
+#mobile-top, #mobile-bottom {width:100%; height:auto;}
+
+#mobile-bottom {position:relative;}
+
+#mobile-fill {background-image:url('../../../../images/mobile-text-fill.jpg'); background-repeat:repeat-y; background-size:contain; width:100%;}
+
+#mobile-frame {width:100%;}
+
+#mobile-text-front {width:72%; margin-left:14%; font-family: "nueva-std-condensed"; font-size:1.5em; line-height:1.2em; text-align:justify;}
+#mobile-text-front p {margin:0px; padding-bottom:1.5em;}
+#page-title p{font-family: "nueva-std-condensed"; font-size:1.8em; text-align:center; padding-bottom:0.7em;}
+
+#mobile-text-front ul li a {text-decoration:none; color:black; list-style-type: disc; list-style-position: inside;}
+#mobile-text-front ul {padding:0px; margin:0px; list-style-type: disc; list-style-position: inside;}
+#mobile-text-front ul li {padding-bottom:0.7em;}
+
+#mobile-logo, #kiss {width:100%; height:auto;}
+
+.mobile-soc-icon {width:13%; height:auto;}
+
+#mobile-socialmedia {background:#3B2624; padding:0px; margin:0px; position:relative; z-index:1;}
+#mobile-socialmedia ul {padding:0px; margin:0px; display:inline;}
+#mobile-socialmedia ul li {display:inline;}
+
+#skeleton {position:absolute; right:12%; bottom:70%; z-index:2; width:74px; height:200px; background: url('../../../images/skeleton.png'); background-size:74px 200px ; background-position:0px 0px;}

@@ -1,0 +1,10 @@
+<?php
+/*
+ * Copyright (c) 2014-2015 Aimy Extensions, Lingua-Systems Software GmbH
+ *
+ * http://www.aimy-extensions.com/
+ *
+ * License: GNU GPLv2, see LICENSE.txt within distribution and/or
+ *          http://www.aimy-extensions.com/software-license.html
+ */
+ defined( '_JEXEC' ) or die(); require_once( JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_aimysitemap' . DIRECTORY_SEPARATOR . 'HttpClient.php' ); require_once( JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_aimysitemap' . DIRECTORY_SEPARATOR . 'Uri.php' ); require_once( JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_aimysitemap' . DIRECTORY_SEPARATOR . 'helpers' . DIRECTORY_SEPARATOR . 'config.php' ); abstract class AimySitemapNotifier { static $ses = array( 'google' => 'http://www.google.com/webmasters/sitemaps/ping?sitemap=%s', 'bing' => 'http://www.bing.com/webmaster/ping.aspx?siteMap=%s' ); static public function is_enabled( $se ) { $cfg = new AimySitemapConfigHelper(); return $cfg->get( 'notify_' . strtolower( $se ), false ); } static public function ping_all_enabled() { $rv = true; foreach ( static::$ses as $se => $ping_url ) { if ( self::is_enabled( $se ) ) { if ( ! self::ping( $se ) ) { $rv = false; } } } return $rv; } static public function ping( $se ) { $se = strtolower( $se ); if ( ! isset( self::$ses[ $se ] ) ) { return false; } $cfg = new AimySitemapConfigHelper(); $sm_url = JUri::root() . $cfg->get( 'xml_path', '/sitemap.xml' ); $req_url = sprintf( self::$ses[ $se ], urlencode( $sm_url ) ); $u = new AimySitemapUri( $req_url ); $resp = null; AimySitemapHttpClient::set_ua_name( 'AimySitemapNotifier/3.15.1' ); $resp = AimySitemapHttpClient::get_url( $u ); if ( is_array( $resp ) && isset( $resp[ 'head' ] ) && $resp[ 'head' ][ 'code' ] == '200' ) { AimySitemapLogger::debug( "Notifier: Sending ping to $se: OK" ); return true; } AimySitemapLogger::debug( "Notifier: Sending ping to $se: FAILED ($req_url)" ); return false; } } 

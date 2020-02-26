@@ -1,0 +1,142 @@
+* { border: 0; margin: 0; padding: 0; }
+
+
+body { background: brown url('sketch/background_main.jpg') bottom left no-repeat;  background-attachment: fixed;  font-family: Georgia; font-size: 100%; }
+
+
+
+
+#landing { margin: 0 auto; max-width: 992px; width: 100%; }
+#landing img { margin-top: 10%; width: 100%; }
+
+
+
+
+#banner { background: transparent url('sketch/navbar_background.png') top left repeat-x; background-size: contain; height: 140px; padding-top: 10px; position: fixed; top: 0;  width: 100%; z-index: 1000; }
+#banner div.inner { margin: 0 auto; max-width: 1000px; width: 100%; }
+
+
+#social, #header { display: inline-block; vertical-align: top; width: 50%; }
+#social { padding-top: 1em;  }
+#social a { color: #393033; text-decoration: none; }
+#header { }
+#header img { clear: right; display: block; width: 85%; }
+
+
+#header a { border-radius: 7px; color: #393033; display: inline; font-size: 1.1em; padding: 5px 8px; text-decoration: none; }
+#header a:hover { color: white; }
+
+
+a.btn_home { background: #AE9A9C; }
+a.btn_work { background: #B6C2AA; }
+a.btn_artist { background: #C6A294; }
+a.btn_blog { background: #CEB99C; }
+a.btn_contact { background: #AAB2B2; }
+
+
+#content {  width: 100%; }
+#content div.inner { margin: 0 auto; max-width: 1000px; min-height: 300px; position: relative; width: 100%; z-index: 10;}
+
+/**/
+
+
+#slideshow { margin-top: 115px;  position: relative;  width: 100%; }
+#slides { margin-bottom: 15px; width: 70%; }
+#slides img { width: 100%; }
+
+#index__head { position: absolute;  right: 0;  top: 0px;   }
+
+
+
+
+#illustration { background: grey; height: 244px; position: relative; width: 100%;  }
+#illustration div { padding: 20px; width: 550px;  }
+#illustration div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+#illustration div h5 {  font-size: 2em;  font-style: italic;  font-weight: lighter;   margin-bottom: 10px;  }
+#illustration div p {  font-size: 1em;   font-weight: lighter;  line-height: 150%;  }
+
+
+#index__tent { bottom: -230px; position: absolute; right: 0; }
+
+
+#contact { margin-top: 155px; width: 100%;  }
+#contact div {  display: inline-block;  padding: 20px;  vertical-align: top;  width: 50%; }
+#contact div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+#contact div form dl { margin-top: 10px; vertical-align: top; width: 100%;  }
+#contact div form dl dt { display: inline-block;  font-size: 1.3em;  margin-right: 10px; vertical-align: top; width: 30%; }
+#contact div form dl dd { display: inline-block; vertical-align: top; width: 60%; }
+#contact div form dl dd input, #contact div form dl dd textarea { padding: 8px; width: 100%; }
+#contact__woman { display: inline-block; margin-bottom: -8px; vertical-align: bottom; }
+
+
+#long__slideshow {  background: lime;  width: 100%; }
+#long__slides { width: 100%; }
+
+
+
+
+/* Artist Page */
+
+
+#artist { background: lime; margin-top: 155px; }
+#artist div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+#artist div h5 {  font-size: 2em;  font-style: italic;  font-weight: lighter;   margin-bottom: 10px;  }
+#artist div p {  font-size: 1em;   font-weight: lighter;  line-height: 150%;  }
+
+#artist > div { background: red; display: inline-block; vertical-align: top; width: 50%; }
+
+#artist_slides ul.bxslider { width: 100%; }
+#artist_slides ul li { width: 100%; }
+#artist_slides ul li img { width: 100%; }
+
+
+	/* BOXES */
+	
+	
+	#boxes { background: pink; margin-top: 20px; width: 100%; }
+	#boxes img { display: inline-block; max-width: 100%; width: 30%; }
+	#boxes img.middle { margin: 0 5%; }
+
+
+	/* QUEEN */
+	
+	
+	#queen { background: rgba(182,194,170,0.85); margin-top: 25px; }
+	#queen div { padding: 20px; }
+	#queen div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+	#queen div h5 {  font-size: 2em;  font-style: italic;  font-weight: lighter;   margin-bottom: 10px;  }
+	#queen div p {  font-size: 1em;   font-weight: lighter;  line-height: 150%;  }
+	#queen div img { margin-top: 20px; }
+	
+	
+
+	/* VINTAGE */
+	
+	
+	#vintage { background: rgba(198,162,148,0.85); margin-top: 25px; }
+	#vintage div { padding: 20px; }
+	#vintage div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+	#vintage div h5 {  font-size: 2em;  font-style: italic;  font-weight: lighter;   margin-bottom: 10px;  }
+	#vintage div p {  font-size: 1em;   font-weight: lighter;  line-height: 150%;  }
+	#vintage div img { margin-top: 20px; }
+
+	#artist__webstore { float: right; }
+	
+		
+	/* DARK */
+
+	
+	#dark { background: rgba(105,105,105,0.85); height: 800px; margin-top: 25px; }
+	#dark div { padding: 20px; }
+	#dark div h4 {  color: white;  font-size: 3em;  font-weight: normal;  margin-bottom: 5px;   }
+	#dark div h5 {  font-size: 2em;  font-style: italic;  font-weight: lighter;   margin-bottom: 10px;  }
+	#dark div p {  font-size: 1em;   font-weight: lighter;  line-height: 150%;  }
+	#dark div img { margin-top: 20px; }
+	
+	#artist__dark__club { float: left; margin: 0 20px 20px; }
+	#artist__dark__dj { float: right; }
+
+
+
+
+
